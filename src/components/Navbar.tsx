@@ -1,7 +1,7 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import Link from 'next/link';
-import Image from 'next/image';
-import DisplayUsername from './DisplayUsername';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Link from "next/link";
+import Image from "next/image";
+import DisplayUsername from "./DisplayUsername";
 
 const Navbar = () => {
   return (
@@ -29,21 +29,22 @@ const Navbar = () => {
               authenticationStatus,
               mounted,
             }) => {
-              const ready = mounted && authenticationStatus !== 'loading';
+              const ready = mounted && authenticationStatus !== "loading";
               const connected =
                 ready &&
                 account &&
                 chain &&
-                (!authenticationStatus || authenticationStatus === 'authenticated');
+                (!authenticationStatus ||
+                  authenticationStatus === "authenticated");
 
               return (
                 <div
                   {...(!ready && {
-                    'aria-hidden': true,
-                    'style': {
+                    "aria-hidden": true,
+                    style: {
                       opacity: 0,
-                      pointerEvents: 'none',
-                      userSelect: 'none',
+                      pointerEvents: "none",
+                      userSelect: "none",
                     },
                   })}
                 >
@@ -68,8 +69,19 @@ const Navbar = () => {
                           className="bg-red-500 text-white font-semibold hover:bg-red-600 px-4 py-2 rounded-full text-sm transition-all shadow-lg flex items-center space-x-2"
                         >
                           <span>Wrong Network</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
                           </svg>
                         </button>
                       );
@@ -84,14 +96,31 @@ const Navbar = () => {
                         >
                           {chain.hasIcon && chain.iconUrl && (
                             <img
-                              alt={chain.name ?? 'Chain icon'}
+                              alt={chain.name ?? "Chain icon"}
                               src={chain.iconUrl}
-                              style={{ width: 20, height: 20, borderRadius: '50%' }}
+                              style={{
+                                width: 20,
+                                height: 20,
+                                borderRadius: "50%",
+                              }}
                             />
                           )}
-                          <span className="text-xs md:text-sm font-medium text-gray-200">{chain.name}</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <span className="text-xs md:text-sm font-medium text-gray-200">
+                            {chain.name}
+                          </span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-gray-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
                           </svg>
                         </button>
 
@@ -100,7 +129,11 @@ const Navbar = () => {
                           type="button"
                           className="bg-gray-800/70 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 md:px-4 rounded-full text-xs md:text-sm font-medium transition-colors"
                         >
-                          {account && <DisplayUsername address={account.address as `0x${string}`} />}
+                          {account && (
+                            <DisplayUsername
+                              address={account.address as `0x${string}`}
+                            />
+                          )}
                         </button>
                       </div>
                     );

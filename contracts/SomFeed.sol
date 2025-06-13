@@ -10,7 +10,6 @@ contract SomFeed {
     address public owner;
     uint256 public postCounter;
 
-    // Biaya untuk membuat postingan dalam WEI (0.01 STT)
     uint256 public constant POST_CREATION_FEE = 0.01 ether;
 
     // Struct untuk menyimpan data Postingan

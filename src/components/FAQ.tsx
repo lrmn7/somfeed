@@ -50,7 +50,7 @@ const FAQ = () => {
         <>
           Security is a priority. The core application logic is governed by a{" "}
           <a
-            href="https://shannon-explorer.somnia.network/address/0xd2Eb1b435f7A9d14865d9284822C1E8199bD9Ac1"
+            href="https://shannon-explorer.somnia.network/address/0xD1327851F37eDcbC22109973cB8D2a81CF3Bb77d?tab=contract"
             target="_blank"
             rel="noopener noreferrer"
             className="text-orange-400 hover:underline"

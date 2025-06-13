@@ -3,7 +3,7 @@ pragma solidity ^0.8.20;
 
 /**
  * @title SomFeed
- * @author Your Name
+ * @author L RMN
  * @notice Kontrak ini mengelola aplikasi sosial on-chain: posting, komentar, dan suka.
  */
 contract SomFeed {

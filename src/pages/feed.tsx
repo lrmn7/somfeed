@@ -88,6 +88,10 @@ const FeedPage: NextPage = () => {
               ↩Home
             </a>
           </Link>{" "}
+          {/* BARIS YANG DITAMBAHKAN DI BAWAH */}
+          <p className="text-xs text-gray-500 mt-1">
+            Note: If post/comment doesn't appear, please refresh the page.
+          </p>
         </div>{" "}
         {isClient && isConnected && (
           <CreatePostForm onPostCreated={handlePostCreated} />

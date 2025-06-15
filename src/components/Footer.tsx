@@ -30,6 +30,9 @@ const Footer = () => {
               <li>
                 <a href="https://somcet.vercel.app/" className="hover:text-orange-500 transition-colors">Somcet</a>
               </li>
+              <li>
+                <a href="https://gsomnia-clicks.vercel.app/" className="hover:text-orange-500 transition-colors">gSomnia Clicks</a>
+              </li>
             </ul>
           </div>
           <div className="md:w-1/3 flex flex-col items-center md:items-end">
